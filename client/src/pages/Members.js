@@ -8,16 +8,7 @@ const Members = props => {
   // Destructure the logout function from AuthContext
   const { logout } = useContext(AuthContext);
 
-  // The secret is just something to demonstrate a placeholder authenticated
-  // api route.
-  const [secret, setSecret] = useState("");
-
-  // this function is duplicated in the Home page component
-  // consider refactor
-  const getSecret = async () => {
-    const secretResponse = await Axios.get("/api/secrets");
-    setSecret(secretResponse.data);
-  };
+  
 
   return (
     <Container className="signup">
@@ -28,7 +19,6 @@ const Members = props => {
             className="m-1"
             onClick={() => {
               logout();
-              setSecret("");
             }}
           >
             Logout
@@ -41,14 +31,6 @@ const Members = props => {
           >
             Home
           </Button>
-          <Button className="m-1" onClick={getSecret}>
-            Show Secret
-          </Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={{ span: 8, offset: 2 }}>
-          <h1>{secret}</h1>
         </Col>
       </Row>
     </Container>
