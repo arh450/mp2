@@ -1,0 +1,19 @@
+$dark-red: #bd2a2a;
+$gold: #ffd46c;
+$black: #0a0408;
+$grey: #564d4d;
+$white: #ffff;
+
+#appNavBar {
+  background-color: $dark-red;
+}
+
+#loginButton {
+  background-color: $grey;
+  border-color: $black;
+}
+
+#loginButton:hover {
+  background-color: $black;
+  border-color: $grey;
+}

@@ -1,28 +1,26 @@
-import React, { useContext } from 'react';
-import { Redirect } from 'react-router-dom'
-import '../App.css';
-import { AuthContext } from '../AuthContext'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col';
-import LoginForm from '../components/LoginForm/index.js';
+import React, { useContext } from "react";
+import { Redirect } from "react-router-dom";
+import { AuthContext } from "../AuthContext";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import LoginForm from "../components/LoginForm/index.js";
 
 function Login(props) {
+  const { isAuth } = useContext(AuthContext);
 
-  const { isAuth } = useContext(AuthContext)
+  console.log("login auth: ", isAuth);
 
-  console.log("login auth: ", isAuth)
-
-  return (
-      isAuth ? <Redirect to='/' />
-        :
-        <Container className="signup">
-          <Row>
-            <Col md={{ span: 8, offset: 2 }}>
-              <LoginForm {...props}/>
-            </Col>
-          </Row>
-        </Container>
+  return isAuth ? (
+    <Redirect to="/" />
+  ) : (
+    <Container className="signup">
+      <Row>
+        <Col md={{ span: 8, offset: 2 }}>
+          <LoginForm {...props} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

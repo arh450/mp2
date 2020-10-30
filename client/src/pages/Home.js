@@ -1,16 +1,12 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../AuthContext";
-import "../App.css";
 import { Container, Row, Button, Col } from "react-bootstrap";
 import Axios from "axios";
 
 function Home(props) {
-  
   const { isAuth, logout } = useContext(AuthContext);
 
-
   return (
-
     <Container className="signup">
       <Row>
         <Col md={{ span: 8, offset: 2 }}>
@@ -19,7 +15,7 @@ function Home(props) {
             <>
               <Button
                 className="m-1"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   logout();
                 }}
@@ -28,7 +24,7 @@ function Home(props) {
               </Button>
               <Button
                 className="m-1"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   props.history.push("/members");
                 }}
@@ -37,7 +33,7 @@ function Home(props) {
               </Button>
               <Button
                 className="m-1"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   props.history.push("/test");
                 }}
@@ -49,7 +45,7 @@ function Home(props) {
             <>
               <Button
                 className="m-1"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   props.history.push("/login");
                 }}
@@ -58,7 +54,7 @@ function Home(props) {
               </Button>
               <Button
                 className="m-1"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   props.history.push("/signup");
                 }}

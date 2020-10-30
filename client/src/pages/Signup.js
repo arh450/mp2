@@ -1,5 +1,4 @@
-import React from 'react'
-import "../App.css";
+import React from "react";
 import SignupForm from "../components/SignUpForm/index.js";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
