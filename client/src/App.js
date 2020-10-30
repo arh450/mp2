@@ -9,7 +9,6 @@ import { AuthProvider, AuthContext } from "./AuthContext";
 import AppNavbar from "./components/Navbar/index.js";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
-import Login from "./pages/Login";
 import Members from "./pages/Members";
 import Test from "./pages/Test";
 
@@ -46,7 +45,6 @@ function App() {
         <AppNavbar />
         <Switch>
           <Route exact path="/" render={(props) => <Home {...props} />} />
-          <Route exact path="/login" render={(props) => <Login {...props} />} />
           <Route
             exact
             path="/signup"

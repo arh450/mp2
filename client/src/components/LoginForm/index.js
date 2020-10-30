@@ -66,13 +66,7 @@ const LoginForm = (props) => {
         Login
       </Button>
       <Form.Group className="mt-4 text-center ">
-        <a
-          onClick={(e) => {
-            e.preventDefault();
-            props.history.push("/signup");
-          }}
-          className="text-white"
-        >
+        <a href="/signup" className="text-white">
           <b>Signup</b>
         </a>
       </Form.Group>
@@ -81,24 +75,3 @@ const LoginForm = (props) => {
 };
 
 export default LoginForm;
-
-{
-  /* <Form id="loginForm" className="px-3 py-2">
-  <Form.Group>
-    <Form.Control type="email" placeholder="Email" />
-  </Form.Group>
-  <Form.Group>
-    <Form.Control type="password" placeholder="Password" />
-  </Form.Group>
-  <Form.Group controlId="formBasicCheckbox">
-    <Button type="submit" id="loginButton" block>
-      Login
-    </Button>
-  </Form.Group>
-  <Form.Group controlId="formBasicCheckbox" className="mt-4 text-center ">
-    <a href="/test" className="text-white">
-      <b>Signup</b>
-    </a>
-  </Form.Group>
-</Form>; dsfsdf */
-}

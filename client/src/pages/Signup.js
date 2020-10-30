@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 
 function Signup(props) {
   return (
-    <Container className="signup">
+    <Container className="signup mt-4 text-white">
       <Row>
         <Col md={{ span: 8, offset: 2 }}>
           <SignupForm {...props} />
