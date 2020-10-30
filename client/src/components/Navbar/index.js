@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../AuthContext.js";
+import LoginForm from "../LoginForm/index.js";
 
 import {
   Navbar,
@@ -28,53 +29,45 @@ const AppNavbar = (props) => {
             height="30"
             className="d-inline-block align-top mr-1"
           />{" "}
-          <Navbar.Brand href="#home">MoviePhood</Navbar.Brand>
+          <Navbar.Brand href="/">MoviePhood</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               {isAuth ? (
                 <>
-                  <Nav.Link href="#home">Home</Nav.Link>
                   <Nav.Link href="#home">Browse</Nav.Link>
                   <Nav.Link href="#home">Favorites</Nav.Link>
                 </>
               ) : (
-                <>
-                  <Nav.Link href="#home">Home</Nav.Link>
-                </>
+                <></>
               )}
             </Nav>
             <Nav>
-              <DropdownButton
-                title="Login"
-                id="loginButton"
-                className="ml-auto"
-                menuAlign="right"
-              >
-                <Form className="px-3 py-2">
-                  <Form.Group>
-                    <Form.Control type="email" placeholder="Email" />
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Control type="password" placeholder="Password" />
-                  </Form.Group>
-                  <Form.Group controlId="formBasicCheckbox">
-                    <Button type="submit" block>
-                      Login
-                    </Button>
-                  </Form.Group>
-                  <Form.Group
-                    controlId="formBasicCheckbox"
-                    className="mt-4 text-center"
+              {isAuth ? (
+                <>
+                  <Button
+                    variant="dark"
+                    className="ml-auto"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      logout();
+                    }}
                   >
-                    <small>
-                      <a>
-                        <b>Signup</b>
-                      </a>
-                    </small>
-                  </Form.Group>
-                </Form>
-              </DropdownButton>
+                    Logout
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <DropdownButton
+                    title="Login"
+                    variant="dark"
+                    className="ml-auto"
+                    menuAlign="right"
+                  >
+                    <LoginForm />
+                  </DropdownButton>
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

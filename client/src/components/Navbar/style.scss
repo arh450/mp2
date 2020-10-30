@@ -1,5 +1,5 @@
 $dark-red: #bd2a2a;
-$gold: #ffd46c;
+$gold: #a67c00;
 $black: #0a0408;
 $grey: #564d4d;
 $white: #ffff;
@@ -8,12 +8,19 @@ $white: #ffff;
   background-color: $dark-red;
 }
 
-#loginButton {
+#loginForm {
   background-color: $black;
-  border-color: $grey;
+}
+
+#loginButton {
+  background-color: $gold;
+  border: none;
 }
 
 #loginButton:hover {
-  background-color: $grey;
-  border-color: $black;
+  filter: brightness(85%);
+}
+
+.dropdown-menu {
+  background-color: $black;
 }
