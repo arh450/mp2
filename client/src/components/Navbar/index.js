@@ -50,33 +50,30 @@ const AppNavbar = (props) => {
                 id="loginButton"
                 className="ml-auto"
                 menuAlign="right"
-                onSelect={(e) => e.stopPropagation()}
               >
-                <Dropdown.Item className="px-3 py-2">
-                  <Form>
-                    <Form.Group>
-                      <Form.Control type="email" placeholder="Email" />
-                    </Form.Group>
-                    <Form.Group>
-                      <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicCheckbox">
-                      <Button type="submit" block>
-                        Login
-                      </Button>
-                    </Form.Group>
-                    <Form.Group
-                      controlId="formBasicCheckbox"
-                      className="mt-4 text-center"
-                    >
-                      <small>
-                        <a>
-                          <b>Signup</b>
-                        </a>
-                      </small>
-                    </Form.Group>
-                  </Form>
-                </Dropdown.Item>
+                <Form className="px-3 py-2">
+                  <Form.Group>
+                    <Form.Control type="email" placeholder="Email" />
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Control type="password" placeholder="Password" />
+                  </Form.Group>
+                  <Form.Group controlId="formBasicCheckbox">
+                    <Button type="submit" block>
+                      Login
+                    </Button>
+                  </Form.Group>
+                  <Form.Group
+                    controlId="formBasicCheckbox"
+                    className="mt-4 text-center"
+                  >
+                    <small>
+                      <a>
+                        <b>Signup</b>
+                      </a>
+                    </small>
+                  </Form.Group>
+                </Form>
               </DropdownButton>
             </Nav>
           </Navbar.Collapse>
