@@ -7,6 +7,8 @@ import {
   Dropdown,
   DropdownButton,
   Container,
+  Form,
+  Button,
 } from "react-bootstrap";
 
 import logo from "./moviephood_logo.png";
@@ -47,12 +49,34 @@ const AppNavbar = (props) => {
                 title="Login"
                 id="loginButton"
                 className="ml-auto"
+                menuAlign="right"
+                onSelect={(e) => e.stopPropagation()}
               >
-                <Dropdown.Item href="#action/3.1">Action</Dropdown.Item>
-                <Dropdown.Item href="#action/3.2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#action/3.3">Something</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item href="#action/3.4">Separated link</Dropdown.Item>
+                <Dropdown.Item className="px-3 py-2">
+                  <Form>
+                    <Form.Group>
+                      <Form.Control type="email" placeholder="Email" />
+                    </Form.Group>
+                    <Form.Group>
+                      <Form.Control type="password" placeholder="Password" />
+                    </Form.Group>
+                    <Form.Group controlId="formBasicCheckbox">
+                      <Button type="submit" block>
+                        Login
+                      </Button>
+                    </Form.Group>
+                    <Form.Group
+                      controlId="formBasicCheckbox"
+                      className="mt-4 text-center"
+                    >
+                      <small>
+                        <a>
+                          <b>Signup</b>
+                        </a>
+                      </small>
+                    </Form.Group>
+                  </Form>
+                </Dropdown.Item>
               </DropdownButton>
             </Nav>
           </Navbar.Collapse>

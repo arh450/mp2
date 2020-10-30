@@ -9,11 +9,11 @@ $white: #ffff;
 }
 
 #loginButton {
-  background-color: $grey;
-  border-color: $black;
+  background-color: $black;
+  border-color: $grey;
 }
 
 #loginButton:hover {
-  background-color: $black;
-  border-color: $grey;
+  background-color: $grey;
+  border-color: $black;
 }
