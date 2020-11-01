@@ -5,10 +5,8 @@ import LoginForm from "../LoginForm/index.js";
 import {
   Navbar,
   Nav,
-  Dropdown,
   DropdownButton,
   Container,
-  Form,
   Button,
 } from "react-bootstrap";
 
@@ -64,7 +62,6 @@ const AppNavbar = (props) => {
                     title="Login"
                     variant="dark"
                     className="ml-auto"
-                    menuAlign="right"
                   >
                     <LoginForm />
                   </DropdownButton>

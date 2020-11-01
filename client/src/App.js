@@ -22,8 +22,7 @@ function App() {
   // Here we subscribe the authentication context using the useContext hook
   // we use isAuth to determine whether the user is logged in, and setIsAuth
   // to change their status on logout.
-  const { isAuth, setIsAuth } = useContext(AuthContext);
-  console.log("App auth: ", isAuth);
+  const { isAuth } = useContext(AuthContext);
 
   // here we are ceating a private route wrapper to prevent front end routing to
   // restricted pages.  The ({ component: Component, ...rest })  argument that is

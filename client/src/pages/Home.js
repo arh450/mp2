@@ -1,19 +1,16 @@
 import React, { useContext, useEffect } from "react";
 import anime from "animejs";
 import { AuthContext } from "../AuthContext";
-import { Container, Button, Col } from "react-bootstrap";
-import Axios from "axios";
+import { Container, Button } from "react-bootstrap";
+// import Axios from "axios";
 
 import "./style.scss";
 
 function Home(props) {
-  const { isAuth, logout } = useContext(AuthContext);
+  const { isAuth } = useContext(AuthContext);
 
   const title = "Welcome to MoviePhood!";
-
   const titleArr = title.split("");
-
-  console.log(titleArr);
 
   useEffect(() => {
     anime.timeline({ loop: false }).add({
@@ -32,8 +29,10 @@ function Home(props) {
       <Container className="d-flex h-100 align-items-center">
         <div className="mx-auto text-center">
           <h1 className="mx-auto my-0 text-white welcomeText">
-            {titleArr.map((letter) => (
-              <span className="letter">{letter}</span>
+            {titleArr.map((letter, i) => (
+              <span className="letter" key={i}>
+                {letter}
+              </span>
             ))}
           </h1>
           {isAuth ? (
