@@ -25,11 +25,13 @@ const AppNavbar = (props) => {
           <img
             alt=""
             src={logo}
-            width="30"
-            height="30"
+            width="45"
+            height="45"
             className="d-inline-block align-top mr-1"
           />{" "}
-          <Navbar.Brand href="/">MoviePhood</Navbar.Brand>
+          <Navbar.Brand href="/" className="mt-2">
+            MoviePhood
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

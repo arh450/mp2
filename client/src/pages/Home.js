@@ -1,16 +1,33 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
+import anime from "animejs";
 import { AuthContext } from "../AuthContext";
-import { Container, Row, Button, Col } from "react-bootstrap";
+import { Container, Button, Col } from "react-bootstrap";
 import Axios from "axios";
+
+import "./style.scss";
 
 function Home(props) {
   const { isAuth, logout } = useContext(AuthContext);
 
+  useEffect(() => {
+    anime.timeline({ loop: false }).add({
+      targets: ".welcomeText",
+      translateX: [40, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeInExpo",
+      duration: 1200,
+      delay: (el, i) => 500 + 30 * i,
+    });
+  });
+
   return (
-    <Container className="signup">
-      <Row>
-        <Col md={{ span: 8, offset: 2 }}>
-          <h1 className="text-white">Home Page</h1>
+    <header className="startHeader" id="pageTop">
+      <Container className="d-flex h-100 align-items-center">
+        <div className="mx-auto text-center">
+          <h1 className="mx-auto my-0 text-white welcomeText">
+            Welcome to MoviePhood!
+          </h1>
           {isAuth ? (
             <>
               <Button
@@ -35,9 +52,9 @@ function Home(props) {
           ) : (
             <></>
           )}
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </Container>
+    </header>
   );
 }
 
