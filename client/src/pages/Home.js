@@ -9,9 +9,15 @@ import "./style.scss";
 function Home(props) {
   const { isAuth, logout } = useContext(AuthContext);
 
+  const title = "Welcome to MoviePhood!";
+
+  const titleArr = title.split("");
+
+  console.log(titleArr);
+
   useEffect(() => {
     anime.timeline({ loop: false }).add({
-      targets: ".welcomeText",
+      targets: ".welcomeText .letter",
       translateX: [40, 0],
       translateZ: 0,
       opacity: [0, 1],
@@ -26,7 +32,9 @@ function Home(props) {
       <Container className="d-flex h-100 align-items-center">
         <div className="mx-auto text-center">
           <h1 className="mx-auto my-0 text-white welcomeText">
-            Welcome to MoviePhood!
+            {titleArr.map((letter) => (
+              <span className="letter">{letter}</span>
+            ))}
           </h1>
           {isAuth ? (
             <>
