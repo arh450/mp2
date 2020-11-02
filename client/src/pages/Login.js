@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import LoginForm from "../components/LoginForm/index.js";
 
-function Login(props) {
+const Login = (props) => {
   const { isAuth } = useContext(AuthContext);
 
   console.log("login auth: ", isAuth);
@@ -22,6 +22,6 @@ function Login(props) {
       </Row>
     </Container>
   );
-}
+};
 
 export default Login;

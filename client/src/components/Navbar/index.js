@@ -25,7 +25,8 @@ const AppNavbar = (props) => {
             src={logo}
             width="45"
             height="45"
-            className="d-inline-block align-top mr-1"
+            id="welcomeLogo"
+            className="d-inline-block rounded p-1 align-top mr-1"
           />{" "}
           <Navbar.Brand href="/" className="mt-2">
             MoviePhood

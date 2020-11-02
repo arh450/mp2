@@ -18,7 +18,7 @@ import "./App.scss";
 // the App component.  We actually set up the app component to implement our react
 // router, but in the end we export App wrapped in the context provider
 
-function App() {
+const App = () => {
   // Here we subscribe the authentication context using the useContext hook
   // we use isAuth to determine whether the user is logged in, and setIsAuth
   // to change their status on logout.
@@ -55,7 +55,7 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 // Here we export the final product of our app/context configuration, and
 // even though it is unnamed here, it will be imported as App in index.js

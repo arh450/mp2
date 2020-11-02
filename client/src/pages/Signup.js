@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function Signup(props) {
+const Signup = (props) => {
   return (
     <Container className="signup mt-4 text-white">
       <Row>
@@ -14,6 +14,6 @@ function Signup(props) {
       </Row>
     </Container>
   );
-}
+};
 
 export default Signup;

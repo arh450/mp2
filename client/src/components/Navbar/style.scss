@@ -8,6 +8,11 @@ $white: #ffff;
   background-color: $dark-red;
 }
 
+#welcomeLogo {
+  background-color: $gold;
+  background-image: linear-gradient(to bottom right, $gold, $black);
+}
+
 #loginForm {
   background-color: $black;
 }
