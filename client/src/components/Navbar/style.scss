@@ -1,4 +1,4 @@
-$dark-red: #bd2a2a;
+$dark-red: #871103;
 $gold: #a67c00;
 $black: #0a0408;
 $grey: #564d4d;
@@ -11,6 +11,24 @@ $white: #ffff;
 #welcomeLogo {
   background-color: $gold;
   background-image: linear-gradient(to bottom right, $gold, $black);
+}
+
+#loginDrop {
+  background-color: $black;
+  border: none;
+}
+
+#loginDrop:hover {
+  filter: brightness(85%);
+}
+
+#logoutButton {
+  background-color: $black;
+  border: none;
+}
+
+#logoutButton:hover {
+  filter: brightness(85%);
 }
 
 #loginForm {

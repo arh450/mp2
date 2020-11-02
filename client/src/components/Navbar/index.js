@@ -33,7 +33,7 @@ const AppNavbar = (props) => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
+            <Nav className="mr-auto mt-2">
               {isAuth ? (
                 <>
                   <Nav.Link href="#home">Browse</Nav.Link>
@@ -43,11 +43,12 @@ const AppNavbar = (props) => {
                 <></>
               )}
             </Nav>
-            <Nav>
+            <Nav className="mt-2">
               {isAuth ? (
                 <>
                   <Button
                     variant="dark"
+                    id="logoutButton"
                     className="ml-auto"
                     onClick={(e) => {
                       e.preventDefault();
@@ -62,6 +63,7 @@ const AppNavbar = (props) => {
                   <DropdownButton
                     title="Login"
                     variant="dark"
+                    id="loginDrop"
                     className="ml-auto"
                   >
                     <LoginForm />

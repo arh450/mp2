@@ -7,7 +7,7 @@ import Axios from "axios";
 const LoginForm = (props) => {
   const { setIsAuth } = useContext(AuthContext);
   const emptyCreds = { emailInput: "", passwordInput: "" };
-  const errorMessage = "invalid credentials";
+  const errorMessage = "Invalid credentials";
   const [formData, setFormData] = useState(emptyCreds);
   const [credsAreInvalid, setCredsAreInvalid] = useState("");
 

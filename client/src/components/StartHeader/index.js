@@ -1,7 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import anime from "animejs";
 import { AuthContext } from "../../AuthContext.js";
 import { Container, Button } from "react-bootstrap";
+import axios from "axios";
 
 import "./style.scss";
 import logo from "../Navbar/moviephood_logo.png";
@@ -32,7 +33,7 @@ const StartHeader = (props) => {
         duration: 1100,
         delay: (el, i) => 500 + 30 * i,
       });
-  });
+  }, []);
 
   return (
     <header className="startHeader" id="pageTop">
@@ -45,13 +46,21 @@ const StartHeader = (props) => {
             height="125"
             className="float-left rounded welcomeBrand p-2"
           />
-          <h1 className="mx-auto mt-5 text-white welcomeText float-left">
-            {titleArr.map((letter, i) => (
-              <span className="letter" key={i}>
-                {letter}
-              </span>
-            ))}
-          </h1>
+
+          {isAuth ? (
+            <></>
+          ) : (
+            <>
+              <h1 className="mx-auto mt-5 text-white welcomeText float-left">
+                {titleArr.map((letter, i) => (
+                  <span className="letter" key={i}>
+                    {letter}
+                  </span>
+                ))}
+              </h1>
+            </>
+          )}
+
           {isAuth ? (
             <>
               <Button
